@@ -31,7 +31,6 @@ print("a =", a, "->", type(a), ":", sys.getsizeof(a))
 # a = 2562378273826392638273628735283752867352736523765376254322874527653762538126170182010237528753276537623457624376243762347236423764747646746746723 -> <class 'int'> : 88
 # a = abc -> <class 'str'> : 44
 
-exit()
 
 # Exercice 1.3
 a = 1
@@ -63,7 +62,7 @@ for i in range(0, len(s)):
     else:
         new_string += s[i]
 print(new_string)
-print(s.upper())
+print(s.upper()[::-1])
 
 # Exercice 1.5
 for y in range(1, 11):
@@ -71,6 +70,7 @@ for y in range(1, 11):
         # print('%4d' % (x * y) , end='') # Formattage de type c printf
         print('{:4}'.format(x * y) , end='') # Le formattage permet d'aligner les colonnes
     print()
+    
     
 # Exercice 1.6
 
@@ -109,7 +109,7 @@ print('\n--- Partie 2\n')
 def even_numbers(n):
     return list(range(0, n + 1, 2))
 
-L = even_numbers(10)
+L = even_numbers(20)
 print('even numbers : ', L)
 L.reverse()
 print('reverse : ', L)
@@ -148,7 +148,8 @@ def min_max_mean_list(l):
         'mean': mean,
     }
 
-mylist = [4, 8, 100, 15, 99]
+# mylist = [4, 8, 100, 15, 99]
+mylist = [5, 8, 2, 10, 4]
 print(mylist, ' => ', min_max_mean_list(mylist), '\n')
 
 # Exercice 2.3 : tri à bulles
@@ -164,7 +165,8 @@ def bubble_sort(t):
                 swap(t, j, j+1)
                 
                 
-T = [6, 15, 2, -7, 8]
+# T = [6, 15, 2, -7, 8]
+T = [5, 2, 8, 1, 4]
 print('Tri à bulles : ', T, ' => ', end = '')
 bubble_sort(T)
 print(T, '\n')
@@ -172,7 +174,7 @@ print(T, '\n')
 # Exercice 2.4 : nombres premiers
 def prime(n):
     if n < 2:
-        return True
+        return False
     
     for i in range(2, n // 2 + 1):
         if n % i == 0:
@@ -244,6 +246,7 @@ def build_grade_list(d):
     return l
 
 print(build_grade_list(notes), '\n')
+exit()
 
 # Exercice 2.6 : logs
 print('2.6 Logs')
