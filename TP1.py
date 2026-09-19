@@ -246,7 +246,6 @@ def build_grade_list(d):
     return l
 
 print(build_grade_list(notes), '\n')
-exit()
 
 # Exercice 2.6 : logs
 print('2.6 Logs')
