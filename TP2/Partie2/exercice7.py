@@ -2,13 +2,8 @@ from functools import reduce
 from bdd import students
 
 def exercice7():
-    def compareStudentsAge(s1, s2):
-        if s1["age"] < s2["age"]:
-            return s1
-        return s2
-
     youngest = reduce(
-        compareStudentsAge,
+        lambda s1, s2: s1 if s1['age'] < s2['age'] else s2,
         students,
         students[0],
     )
