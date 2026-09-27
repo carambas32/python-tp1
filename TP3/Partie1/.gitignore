@@ -1,0 +1,4 @@
+project/
+backup/
+*.zip
+data.csv
